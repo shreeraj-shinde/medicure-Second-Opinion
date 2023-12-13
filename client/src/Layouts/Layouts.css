@@ -1,0 +1,38 @@
+.main-wrapper {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgb(131, 226, 248);
+  background: linear-gradient(
+    5deg,
+    rgba(131, 226, 248, 1) 41%,
+    rgba(143, 249, 235, 1) 61%
+  );
+}
+.main-wrapper .inner-wrapper {
+  background: #fffffa;
+  height: 90%;
+  width: 90%;
+  border-radius: 45px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.main-wrapper .inner-wrapper .sidebar-component-wrapper {
+  margin: 8px 5px 8px 5px;
+  height: 99%;
+  width: 100%;
+  background: #f2f2f3;
+  border-radius: 45px;
+  overflow: hidden;
+  display: flex;
+}
+
+.component-wrapper {
+  padding: 42px 43px;
+  width: 100%;
+}
