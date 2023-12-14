@@ -161,13 +161,13 @@
 .disclaimer-wrapper {
   margin-top: 24px;
   border: red 1px solid;
-  padding: 4px 10px;
+  padding: 4px 10px 4px 5px;
   border-radius: 8px;
 }
 
 .disclaimer-wrapper span {
   color: red;
-  font-size: 16px;
+  font-size: 14px;
 }
 
 .title-message-wrapper {
@@ -190,4 +190,12 @@
   display: flex;
   align-items: center;
   margin-top: 14px;
+}
+
+.prescribe-medicine-title-message {
+  margin-top: 16px;
+}
+
+.prescribe-medicine-message {
+  margin-top: 12px;
 }

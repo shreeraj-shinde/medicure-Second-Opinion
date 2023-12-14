@@ -1,7 +1,12 @@
-import React from "react";
+import React, { useState } from "react";
 import Layout from "../Layouts/Layouts";
+import ModalComponent from "../Components/ModalComponent";
 
-const Results = () => {
+const Results = (props) => {
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const showModal = () => {
+    setIsModalOpen(true);
+  };
   return (
     <>
       <h1>Results</h1>
@@ -45,9 +50,10 @@ const Results = () => {
             <p>
               Thank you for providing the symptoms. Based on the information you
               provided, our initial analysis suggests that you may be
-              experiencing symptoms associated with <b>Allergy</b>. Please note
-              that this is not a definitive diagnosis, and it is essential to
-              consult with a healthcare professional for a thorough evaluation.
+              experiencing symptoms associated with <b>{props.disease}</b>.
+              Please note that this is not a definitive diagnosis, and it is
+              essential to consult with a healthcare professional for a thorough
+              evaluation.
             </p>
           </div>
         </div>
@@ -66,9 +72,17 @@ const Results = () => {
               </li>
             </ul>
           </div>
-          <button className="results-proceed-button">Suggest Medicines</button>
+          <button className="results-proceed-button" onClick={showModal}>
+            Suggest Medicines
+          </button>
         </div>
       </div>
+      <ModalComponent
+        isModalOpen={isModalOpen}
+        setIsModalOpen={setIsModalOpen}
+        disease={props.disease}
+        setMedicine={props.setMedicine}
+      />
     </>
   );
 };

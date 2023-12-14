@@ -7,6 +7,7 @@ import { IoHome } from "react-icons/io5";
 import { FaChevronLeft, FaDiagnoses } from "react-icons/fa";
 import { VscGraph } from "react-icons/vsc";
 import { AnimatePresence } from "framer-motion";
+import { CiPill } from "react-icons/ci";
 const Sidebar = () => {
   const [isOpen, setisOpen] = useState(false);
   const toggle = () => setisOpen(!isOpen);
@@ -43,6 +44,11 @@ const Sidebar = () => {
       icon: <VscGraph />,
       path: "/v1/results",
       name: "Results",
+    },
+    {
+      icon: <CiPill />,
+      path: "/v1/medicine_prescribtion",
+      name: "Prescribe ",
     },
   ];
   return (
