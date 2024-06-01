@@ -145,7 +145,7 @@ const options = [
   { value: "vomiting", label: "Vomiting" },
   { value: "muscle_pain", label: "Muscle pain" },
   { value: "headache", label: "Headache" },
-  { value: "skin_rash", lable: "Skin Rash" },
+  { value: "skin_rash", label: "Skin Rash" },
   { value: "nodal_skin_eruptions", label: "Nodal Skin Eruptions" },
   { value: "continuous_sneezing", label: "Continuous sneezing" },
   { value: "chills", label: "Chills" },
@@ -200,11 +200,6 @@ const options = [
   { value: "redness_of_eyes", label: "Redness_of_eyes" },
   { value: "sinus_pressure", label: "Sinus pressure" },
 ];
-const items = [
-  symtomps.map((symptom) => {
-    return { value: symptom, label: symptom };
-  }),
-];
 
 const Diagnose = (props) => {
   const navigate = useNavigate();
@@ -250,7 +245,7 @@ const Diagnose = (props) => {
               <div className="symptom-selector" key={i}>
                 <div className="symptom-inputbar-wrapper">
                   <Select
-                    options={items}
+                    options={options}
                     isLoading={true}
                     placeholder={`Input Symptom ${i + 1}`}
                     className="inputbar"
